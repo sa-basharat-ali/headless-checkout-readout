@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Headless checkout readout</title>
+<meta name="description" content="Did a headless on-ramp checkout lift conversion? Four readings of one staggered launch, scored against the known truth.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f4f3;--paper:#fcfdfd;--ink:#14191a;--mute:#5d6869;--line:#d6dedd;--line2:#e8eeed;--acc:#0f766e;--acc-soft:#dcefed;--red:#b4352b;--green:#1d7a46;--amber:#8f5d00;--amber-soft:#f8ecd2;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1212;--paper:#151a1a;--ink:#e8eeed;--mute:#97a3a2;--line:#2a3333;--line2:#1d2424;--acc:#4fd1c0;--acc-soft:#123331;--red:#ff8a7c;--green:#62d394;--amber:#f0b45a;--amber-soft:#33270f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1212;--paper:#151a1a;--ink:#e8eeed;--mute:#97a3a2;--line:#2a3333;--line2:#1d2424;--acc:#4fd1c0;--acc-soft:#123331;--red:#ff8a7c;--green:#62d394;--amber:#f0b45a;--amber-soft:#33270f;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.6 var(--sans);padding:28px 16px 64px;font-variant-numeric:tabular-nums}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:18px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);background:var(--paper);border:1px solid var(--line);border-radius:10px}.strip div{padding:9px 16px;border-right:1px solid var(--line)}.strip div:last-child{border-right:0}
+.lbl{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}.val{font-weight:500;font-size:14px}
+h1{font:700 clamp(30px,5vw,44px)/1.08 var(--sans);letter-spacing:-.02em;margin:14px 0 12px;text-wrap:balance}.lede{color:var(--mute);max-width:66ch;margin:0}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:14px 18px;border-bottom:1px solid var(--line)}.head h2{font:600 19px/1.3 var(--sans);margin:0}.head .no{font:500 12px var(--mono);color:var(--mute)}
+.body{padding:16px 18px}p{margin:0 0 12px;max-width:68ch}p:last-child{margin-bottom:0}.note{font-size:13.5px;color:var(--mute)}
+.bars{display:grid;gap:10px;padding:16px 18px}.bar{display:grid;grid-template-columns:minmax(180px,330px) 1fr 84px;gap:12px;align-items:center;font-size:14px}
+.bar .t{height:14px;background:var(--line2);border-radius:3px;overflow:hidden;position:relative}.bar .t i{display:block;height:100%;background:var(--acc)}.bar .t i.over{background:var(--red)}
+.bar .t b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}.bar .v{font:600 13px var(--mono);text-align:right}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:540px;font-size:14px}th{font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--mute);text-align:left;padding:8px 14px;border-bottom:1px solid var(--line)}td{padding:10px 14px;border-bottom:1px solid var(--line2)}tr:last-child td{border-bottom:0}.n{text-align:right;font-family:var(--mono)}
+.r{color:var(--red)}.g{color:var(--green)}
+.got{border-color:var(--amber)}.got .head{background:var(--amber-soft)}.got .head h2{color:var(--amber)}
+pre{font:12.5px/1.6 var(--mono);background:var(--line2);padding:12px 14px;border-radius:8px;overflow-x:auto;margin:0}
+footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--mute)}a{color:var(--acc)}
+@media (max-width:620px){.strip{grid-template-columns:1fr}.strip div{border-right:0;border-bottom:1px solid var(--line)}.bar{grid-template-columns:1fr 70px}.bar .t{grid-column:1/-1;order:3}}
+</style></head><body><div class="wrap">
+<div class="strip"><div><div class="lbl">Question</div><div class="val">Did the launch move conversion?</div></div><div><div class="lbl">Data</div><div class="val">458,119 synthetic buy sessions</div></div><div><div class="lbl">Candidate</div><div class="val">Syed Ahmed Basharat Ali</div></div></div>
+<header><h1>A headless checkout lifted conversion 6.1 points. The launch dashboard said 13.2.</h1>
+<p class="lede">A synthetic fiat-to-crypto on-ramp, March to September 2026. Four wallet partners turn on an embedded Apple Pay checkout on May 14 (no redirect, no re-authentication), ten more on July 1, ten on August 15, sixteen never. Every headless session is also played out under the old widget with the same random draws, so the true effect is known: 4,578 purchases and $1.04M of volume caused by the launch.</p></header>
+
+<section class="card"><div class="head"><h2>Four readings of the same launch</h2><span class="no">percentage points of conversion · line = truth</span></div>
+<div class="bars">
+<div class="bar"><span>Launch partners, 6 weeks before vs after</span><span class="t"><i class="over" style="width:87%"></i><b style="left:40%"></b></span><span class="v r">+13.2</span></div>
+<div class="bar"><span>Headless vs widget sessions, after launch</span><span class="t"><i class="over" style="width:58%"></i><b style="left:40%"></b></span><span class="v r">+8.8</span></div>
+<div class="bar"><span>Diff-in-diff vs not-yet-launched partners</span><span class="t"><i style="width:46%"></i><b style="left:40%"></b></span><span class="v">+7.0</span></div>
+<div class="bar"><span>Same, within returning and new users</span><span class="t"><i style="width:44%"></i><b style="left:40%"></b></span><span class="v">+6.7</span></div>
+<div class="bar"><span><strong>True effect</strong></span><span class="t"><i style="width:40%;background:var(--ink)"></i></span><span class="v">+6.1</span></div>
+</div>
+<div class="body" style="padding-top:0"><p class="note">The launch landed in a market rally: partners that hadn't launched yet gained 6.3 points over the same four weeks. Headless sessions are also all iOS and more often returning verified users (58% vs 51%), so a session-level comparison credits the checkout with who the users already were. Split by user type, diff-in-diff lands within about a point of the truth on every wave, and returning users gain about four times what new users do.</p></div></section>
+
+<section class="card"><div class="head"><h2>Partner conversion gaps are mostly the card issuer</h2><span class="no">before any launch, same widget everywhere</span></div>
+<div class="body"><p>Partner conversion ranged from 21.0% to 31.5%. Issuer approval alone reproduces <strong>75% of that variance</strong>. Six of the ten lowest-converting partners are UK-heavy, and only 4 of the bottom 10 are also bottom 10 for reaching the payment step.</p></div>
+<div class="tw"><table><thead><tr><th>Partner region</th><th class="n">Cards from banks that block crypto</th><th class="n">Approval after a cleared checkout</th></tr></thead><tbody>
+<tr><td>US</td><td class="n">10%</td><td class="n">81.2%</td></tr>
+<tr><td>EEA</td><td class="n">12%</td><td class="n">78.4%</td></tr>
+<tr><td>Rest of world</td><td class="n">20%</td><td class="n">72.7%</td></tr>
+<tr><td>UK</td><td class="n">38%</td><td class="n r">62.6%</td></tr>
+</tbody></table></div></section>
+
+<section class="card"><div class="head"><h2>Headless fraud, read too early</h2><span class="no">Aug-Sep iOS purchases · chargebacks per 1,000</span></div>
+<div class="tw"><table><thead><tr><th>Path</th><th class="n">Seen by Sep 30</th><th class="n">Once mature</th></tr></thead><tbody>
+<tr><td>Headless</td><td class="n">0.27</td><td class="n">1.71</td></tr>
+<tr><td>Widget</td><td class="n">1.15</td><td class="n">4.62</td></tr>
+<tr><td>Widget / headless</td><td class="n r">4.3x</td><td class="n">2.7x</td></tr>
+</tbody></table></div>
+<div class="body"><p class="note">Chargebacks arrive weeks to months after the purchase (median 45 days here), and most headless volume is recent. Headless is safer, because Apple Pay is, but the early read overstates the gap and understates headless's own rate about sixfold.</p></div></section>
+
+<section class="card got"><div class="head"><h2>What surprised me</h2></div><div class="body"><p>I expected re-weighting by user type to fix the pooled diff-in-diff. It barely moved it (7.0 to 6.7). Per wave and per user type the method was already right; the leftover error came from pooling returning and new users, who respond differently to the rally, across windows where their shares were shifting. The fix is to report the effect by user type, not to correct the total harder.</p></div></section>
+
+<section class="card"><div class="head"><h2>Run it</h2><span class="no">stdlib only · about 4 seconds</span></div><div class="body"><pre>python3 run.py</pre></div></section>
+<footer><span>Synthetic data, fixed seed. No real partner, user or bank.</span><span>Syed Ahmed Basharat Ali · <a href="https://basharat.net">basharat.net</a> · <a href="https://github.com/sa-basharat-ali/headless-checkout-readout">source</a></span></footer>
+</div></body></html>
